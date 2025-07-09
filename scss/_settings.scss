@@ -1,0 +1,13 @@
+a,
+li,
+span,
+div {
+	font-family: "Inter", "Arial", sans-serif;
+	color: $dark-blue;
+	text-decoration: none;
+	transition: $transition-animate-default;
+}
+
+a:hover {
+	color: $blue-initial;
+}

@@ -1,0 +1,50 @@
+.header {
+	@include flex-row-align-center;
+	justify-content: space-between;
+	max-width: rem-calc(1280);
+	margin: rem-calc(20) auto;
+	padding-inline: rem-calc(16);
+
+	&__logo {
+		flex-shrink: 0;
+	}
+
+	&__nav {
+		padding-left: rem-calc(68);
+	}
+
+	&__list {
+		@include flex-row-align-center;
+		gap: rem-calc(15);
+
+		&-item {
+			& a {
+				font-size: rem-calc(14);
+				line-height: rem-calc(20);
+				letter-spacing: 0.1px;
+			}
+
+			&_active {
+				& a {
+					color: $blue-initial;
+					text-decoration: underline;
+					text-underline-offset: rem-calc(12);
+					text-decoration-thickness: rem-calc(2);
+				}
+			}
+		}
+	}
+
+	&__arrow {
+		margin-left: rem-calc(8);
+	}
+
+	&__communication {
+		@include flex-row-align-center;
+		gap: rem-calc(8);
+	}
+
+	&__burger {
+		display: none;
+	}
+}

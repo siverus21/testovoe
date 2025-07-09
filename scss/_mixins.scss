@@ -1,0 +1,85 @@
+@mixin flex-row-align-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+@function rem-calc($px) {
+	@return ($px / 16) * 1rem;
+}
+
+@mixin button($bg: $yellow-initial) {
+	$bg-hover: null;
+	$bg-pressed: null;
+
+	@if $bg == $yellow-initial {
+		$bg-hover: $yellow-hover;
+		$bg-pressed: $yellow-pressed;
+	} @else {
+		$bg-hover: $blue-hover;
+		$bg-pressed: $blue-pressed;
+	}
+
+	display: block;
+	padding: rem-calc(7) rem-calc(16);
+
+	color: $white;
+	font-size: rem-calc(15);
+
+	background-color: $bg;
+	border: unset;
+	border-radius: $border-radius-default;
+	cursor: pointer;
+
+	transition: $transition-animate-default;
+
+	&:hover {
+		background-color: $bg-hover;
+	}
+
+	&:active {
+		background-color: $bg-pressed;
+	}
+}
+
+@mixin button-icon($border-color: $yellow-initial) {
+	$border-color-hover: null;
+	$border-color-pressed: null;
+
+	@if $border-color == $yellow-initial {
+		$border-color-hover: $yellow-hover;
+		$border-color-pressed: $yellow-pressed;
+	} @else {
+		$border-color-hover: $blue-hover;
+		$border-color-pressed: $blue-pressed;
+	}
+
+	display: block;
+	padding: rem-calc(10) rem-calc(11);
+
+	color: $gray;
+	line-height: 1;
+
+	background-color: inherit;
+	border: rem-calc(1) solid $white;
+	border-radius: $border-radius-default;
+	cursor: pointer;
+
+	transition: $transition-animate-default;
+
+	&:hover {
+		border-color: $border-color-hover;
+
+		& path {
+			color: $border-color-hover;
+		}
+	}
+
+	&:active {
+		border-color: $border-color-pressed;
+
+		& path {
+			color: $border-color-pressed;
+		}
+	}
+}
