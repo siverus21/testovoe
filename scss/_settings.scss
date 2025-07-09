@@ -1,8 +1,11 @@
+body {
+	font-family: $font-inter;
+}
+
 a,
 li,
 span,
 div {
-	font-family: "Inter", "Arial", sans-serif;
 	color: $dark-blue;
 	text-decoration: none;
 	transition: $transition-animate-default;

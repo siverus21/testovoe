@@ -1,0 +1,53 @@
+.hero-section {
+	position: relative;
+	display: flex;
+	@include container;
+	margin: rem-calc(80) auto 0;
+	justify-content: space-between;
+	padding-inline: $default-inline-padding;
+	height: rem-calc(620);
+
+	&__title {
+		font-family: $font-jura;
+		font-size: rem-calc(152);
+		text-transform: uppercase;
+		line-height: 1;
+	}
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		max-width: rem-calc(620);
+		aspect-ratio: 1/1;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -4%;
+		z-index: $z-index-duck;
+	}
+
+	&__duck {
+		position: absolute;
+
+		&-say {
+			position: absolute;
+			top: 35%;
+			left: rem-calc(-48);
+		}
+	}
+
+	&__decription {
+		z-index: $z-index-upper-duck;
+		padding-top: rem-calc(93);
+	}
+
+	&__involvement {
+		max-width: rem-calc(315);
+		margin-top: rem-calc(5);
+		margin-left: rem-calc(140);
+		line-height: rem-calc(22);
+
+		&-text {
+			margin-bottom: rem-calc(7);
+		}
+	}
+}

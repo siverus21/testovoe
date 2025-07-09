@@ -1,9 +1,10 @@
 .header {
 	@include flex-row-align-center;
 	justify-content: space-between;
-	max-width: rem-calc(1280);
+
+	@include container;
 	margin: rem-calc(20) auto;
-	padding-inline: rem-calc(16);
+	padding-inline: $default-inline-padding;
 
 	&__logo {
 		flex-shrink: 0;
@@ -11,6 +12,10 @@
 
 	&__nav {
 		padding-left: rem-calc(68);
+
+		@include medium {
+			display: none
+		}
 	}
 
 	&__list {
@@ -44,7 +49,17 @@
 		gap: rem-calc(8);
 	}
 
+	&__connect {
+		@include small {
+			display: none;
+		} 
+	}
+
 	&__burger {
 		display: none;
+
+		@include medium {
+			display: block;
+		}
 	}
 }

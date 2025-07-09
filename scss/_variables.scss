@@ -6,10 +6,28 @@ $blue-initial: #2581eb;
 $blue-hover: #439fff;
 $blue-pressed: #0763cd;
 
+$yellow-icon-hover: #FFDD55;
+$yellow-icon-pressed: #EAB308;
+
+$blue-icon-hover: #2581EB;
+$blue-icon-pressed: #0763CD;
+
 $dark-blue: #1f2937;
 $white: #ffffff;
 $gray: #6b7280;
 
+$font-inter: "Inter", "Arial", sans-serif;
+$font-jura: "Jura", "Arial", sans-serif;
+
 $border-radius-default: rem-calc(8);
 
 $transition-animate-default: all 0.3s ease;
+
+$z-index-duck: 10;
+$z-index-upper-duck: 20;
+
+$default-inline-padding: rem-calc(16);
+
+$desktop: rem-calc(1280);
+$medium: rem-calc(960);
+$small: rem-calc(640);

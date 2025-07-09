@@ -4,6 +4,10 @@
 	align-items: center;
 }
 
+@mixin container {
+	max-width: rem-calc(1280);
+}
+
 @function rem-calc($px) {
 	@return ($px / 16) * 1rem;
 }
@@ -71,7 +75,7 @@
 		border-color: $border-color-hover;
 
 		& path {
-			color: $border-color-hover;
+			stroke: $border-color-hover;
 		}
 	}
 
@@ -79,7 +83,53 @@
 		border-color: $border-color-pressed;
 
 		& path {
-			color: $border-color-pressed;
+			stroke: $border-color-pressed;
 		}
 	}
 }
+  
+@mixin button-border($border-color: $yellow-initial) {
+	border: rem-calc(1) solid $border-color;
+
+	$bg-hover: null;
+	$bg-pressed: null;
+
+	@if $border-color == $yellow-initial {
+		$bg-hover: $yellow-hover;
+		$bg-pressed: $yellow-pressed;
+	} @else {
+		$bg-hover: $blue-hover;
+		$bg-pressed: $blue-pressed;
+	}
+
+	&:hover {
+		background-color: $bg-hover;
+		border-color: $bg-hover;
+
+		& path {
+			stroke: $dark-blue;
+		}
+	}
+
+	&:active {
+		border-color: $bg-pressed;
+		background-color: $bg-pressed;
+
+		& path {
+			stroke: $white;
+		}
+	}
+}
+  
+@mixin medium {
+	@media only screen and (max-width: $medium) {
+		@content;
+	}
+}
+
+@mixin small {
+	@media only screen and (max-width: $small) {
+		@content;
+	}
+}
+  

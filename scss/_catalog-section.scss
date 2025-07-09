@@ -1,0 +1,18 @@
+.catalog-section {
+	@include container;
+	margin: rem-calc(-80) auto;
+	position: relative;
+	z-index: $z-index-upper-duck;
+	padding-inline: rem-calc(130);
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		gap: rem-calc(10);
+	}
+
+	&__link {
+		@include flex-row-align-center;
+		gap: rem-calc(18);
+	}
+}

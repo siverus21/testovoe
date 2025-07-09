@@ -1,7 +1,16 @@
 .button {
 	@include button($yellow-initial);
 
+	&.button_blue {
+		@include button($blue-initial);
+		width: max-content;
+	}
+
 	&.button_icon {
 		@include button-icon($blue-initial);
+	}
+
+	&.button_border {
+		@include button-border($yellow-initial);
 	}
 }

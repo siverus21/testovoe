@@ -85,10 +85,6 @@ label {
 	fill: currentColor;
 }
 
-:where([stroke]:not([stroke="none"], [stroke^="url"])) {
-	stroke: currentColor;
-}
-
 svg * {
 	transition-property: fill, stroke;
 }
