@@ -1,0 +1,28 @@
+.burger-menu {
+	position: fixed;
+	top: rem-calc(80);
+	left: 0;
+	background-color: $blackuot;
+	width: 100%;
+	height: 100%;
+	z-index: $z-index-burger;
+	transform: translateY(-140%);
+	transition: $transition-animate-default;
+
+	&_active {
+		transform: translateY(0);
+	}
+
+	&__wrapper {
+		background-color: $white;
+		border-bottom-left-radius: $border-radius-burger;
+		border-bottom-right-radius: $border-radius-burger;
+		padding-top: rem-calc(22);
+	}
+
+	&__buttons {
+		@include flex-row-align-center;
+		justify-content: center;
+		padding-bottom: rem-calc(35);
+	}
+}

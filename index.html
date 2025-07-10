@@ -64,16 +64,56 @@
                 </a>
             </div>
             <div class="header__connect">
-                <button class="button button_yellow">Заказать обратный звонок</button>
+                <button class="button button_yellow js-callback">Заказать обратный звонок</button>
             </div>
             <div class="header__burger">
-                <button class="button button_icon button_border">
+                <button class="button button_icon button_border js-open-burger">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 4H14" stroke="#1F2937" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M2 8H14" stroke="#1F2937" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M2 12H14" stroke="#1F2937" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
+                <button class="button button_icon button_close js-close-burger hide">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 20L23.5356 23.5355M16.4645 23.5355L20 20L16.4645 23.5355ZM23.5356 16.4645L20 20L23.5356 16.4645ZM20 20L16.4645 16.4645L20 20Z"
+                            stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="burger-menu">
+                    <div class="burger-menu__wrapper">
+                        <nav class="header__nav header__nav_burger">
+                            <ul class="header__list">
+                                <li class="header__list-item header__list-item_active">
+                                    <a href="/">Главная</a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#">
+                                        Каталог
+                                        <svg class="header__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.5 1L4.5 5L8.5 1" stroke="#1F2937" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#">Блог</a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#">Отзывы</a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="burger-menu__buttons">
+                            <button class="button button_yellow js-callback">Заказать обратный звонок</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -164,6 +204,35 @@
     </main>
     <footer class="footer">
     </footer>
+    <div class="popup hide">
+        <form class="popup-form" action="#">
+            <div class="popup-form__item">
+                <label class="popup-form__label" for="user-name">Имя <span class="popup-form__star">*</span></label>
+                <input class="popup-form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя">
+            </div>
+            <div class="popup-form__item">
+                <label class="popup-form__label" for="user-phone">Телефон <span class="popup-form__star">*</span></label>
+                <input class="popup-form__input" type="phone" name="user-phone" id="user-phone"
+                    placeholder="+7 000 000 00 00">
+            </div>
+            <div class="popup-form__item">
+                <button class="button button_yellow" type="submit">Отправить</button>
+            </div>
+            <div class="popup-form__item popup-form__item_license">
+                <p>Нажимая кнопку “Отправить”, вы соглашаетесь с <a class="popup-form__link" href="#">политикой
+                        конфиденциальности</a> и
+                    <a class="popup-form__link" href="#">договором оферты</a>
+                </p>
+            </div>
+            <div class="popup-form__close js-popup-close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 10L13.5356 13.5355M6.46449 13.5355L10 10L6.46449 13.5355ZM13.5356 6.46447L10 10L13.5356 6.46447ZM10 10L6.46449 6.46447L10 10Z"
+                        stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </form>
+    </div>
     <script src="./js/webpack-app.js"></script>
 </body>
 

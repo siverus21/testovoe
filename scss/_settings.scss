@@ -14,3 +14,17 @@ div {
 a:hover {
 	color: $blue-initial;
 }
+
+main {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.hide {
+	display: none !important;
+}
+
+body:has(.burger-menu_active),
+body:has(.popup_active) {
+	overflow: hidden;
+}

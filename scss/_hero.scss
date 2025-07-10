@@ -1,17 +1,49 @@
 .hero-section {
 	position: relative;
 	display: flex;
+	flex-direction: row;
 	@include container;
-	margin: rem-calc(80) auto 0;
+	margin: rem-calc(60) auto 0;
 	justify-content: space-between;
 	padding-inline: $default-inline-padding;
 	height: rem-calc(620);
+
+	@include medium {
+		height: rem-calc(560);
+		margin: rem-calc(28) auto 0;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	@include small {
+		height: auto;
+	}
 
 	&__title {
 		font-family: $font-jura;
 		font-size: rem-calc(152);
 		text-transform: uppercase;
 		line-height: 1;
+
+		@include desktop {
+			font-size: rem-calc(136);
+		}
+
+		@media (max-width: rem-calc(1024)) {
+			font-size: rem-calc(130);
+		}
+
+		@include medium {
+			font-size: rem-calc(152);
+		}
+
+		@include custom-media(760) {
+			font-size: rem-calc(122);
+		}
+
+		@include small {
+			font-size: rem-calc(92);
+		}
 	}
 
 	&__image {
@@ -23,6 +55,65 @@
 		transform: translateX(-50%);
 		top: -4%;
 		z-index: $z-index-duck;
+
+		@include desktop {
+			max-width: rem-calc(577);
+			top: -1%;
+		}
+
+		@include custom-media(1160) {
+			max-width: rem-calc(507);
+			top: 2%;
+			left: 48%;
+		}
+
+		@include custom-media(1150) {
+			top: 9%;
+			left: 42%;
+		}
+
+		@include custom-media(1100) {
+			top: 8%;
+			left: 46%;
+		}
+
+		@include medium {
+			max-width: rem-calc(577);
+			transform: unset;
+			left: unset;
+			top: -6%;
+			right: -28%;
+			order: 3;
+		}
+
+		@include custom-media(930) {
+			max-width: rem-calc(500);
+			right: -22%;
+			top: 18%;
+		}
+
+		@include custom-media(830) {
+			max-width: rem-calc(420);
+			right: -26%;
+			top: 22%;
+		}
+
+		@include small {
+			max-width: rem-calc(373);
+		}
+
+		@include custom-media(590) {
+			top: 76%;
+			right: -30%;
+		}
+
+		@include custom-media(520) {
+			right: -33%;
+		}
+
+		@include custom-media(440) {
+			right: -42%;
+		}
 	}
 
 	&__duck {
@@ -32,12 +123,32 @@
 			position: absolute;
 			top: 35%;
 			left: rem-calc(-48);
+
+			@include small {
+				width: rem-calc(64);
+				left: rem-calc(-16);
+			}
 		}
 	}
 
 	&__decription {
 		z-index: $z-index-upper-duck;
 		padding-top: rem-calc(93);
+
+		@include custom-media(1100) {
+			padding-top: rem-calc(125);
+
+		}
+
+		@include medium {
+			order: 2;
+			padding-top: 0;
+			margin-top: rem-calc(-30);
+		}
+
+		@include small {
+			margin-top: 0;
+		}
 	}
 
 	&__involvement {
@@ -45,6 +156,11 @@
 		margin-top: rem-calc(5);
 		margin-left: rem-calc(140);
 		line-height: rem-calc(22);
+
+		@include medium {
+			margin-left: 0;
+			margin-top: rem-calc(16);
+		}
 
 		&-text {
 			margin-bottom: rem-calc(7);

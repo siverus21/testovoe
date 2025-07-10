@@ -15,16 +15,27 @@ $blue-icon-pressed: #0763CD;
 $dark-blue: #1f2937;
 $white: #ffffff;
 $gray: #6b7280;
+$red: #ff0000;
+$black: #000000;
+$blackuot: rgba($black, 0.15);
+
+$star-color: #FF6C2D;
+$border-input-color: #F1F1F1;
 
 $font-inter: "Inter", "Arial", sans-serif;
 $font-jura: "Jura", "Arial", sans-serif;
 
 $border-radius-default: rem-calc(8);
+$border-radius-form: rem-calc(20);
+$border-radius-input: rem-calc(14);
+$border-radius-burger: rem-calc(12);
 
 $transition-animate-default: all 0.3s ease;
 
 $z-index-duck: 10;
 $z-index-upper-duck: 20;
+$z-index-burger: 25;
+$z-index-popup: 30;
 
 $default-inline-padding: rem-calc(16);
 

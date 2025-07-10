@@ -121,6 +121,12 @@
 	}
 }
   
+@mixin desktop {
+	@media only screen and (max-width: $desktop) {
+		@content;
+	}
+}
+
 @mixin medium {
 	@media only screen and (max-width: $medium) {
 		@content;
@@ -129,6 +135,12 @@
 
 @mixin small {
 	@media only screen and (max-width: $small) {
+		@content;
+	}
+}
+
+@mixin custom-media($width) {
+	@media only screen and (max-width: rem-calc($width)) {
 		@content;
 	}
 }

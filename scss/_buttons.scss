@@ -13,4 +13,11 @@
 	&.button_border {
 		@include button-border($yellow-initial);
 	}
+
+	&.button_close {
+		padding: 0;
+		background-color: unset;
+		width: rem-calc(40);
+		height: rem-calc(40);
+	}
 }
