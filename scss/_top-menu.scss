@@ -1,0 +1,40 @@
+.top-menu {
+	@include flex-row-align-center;
+	gap: rem-calc(15);
+
+	@include medium {
+		flex-direction: column;
+		gap: rem-calc(21);
+	}
+
+	&__item {
+		&_active {
+			& a {
+				color: $blue-initial;
+				text-decoration: underline;
+				text-underline-offset: rem-calc(12);
+				text-decoration-thickness: rem-calc(2);
+			}
+		}
+	}
+
+	&__link {
+		font-size: rem-calc(14);
+		line-height: rem-calc(20);
+		letter-spacing: 0.1px;
+
+		&_dropdown {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__arrow {
+		margin-top: rem-calc(2);
+		margin-left: rem-calc(8);
+
+		@include medium {
+			display: none;
+		}
+	}
+}

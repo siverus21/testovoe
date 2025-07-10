@@ -20,45 +20,10 @@
 		&_burger {
 			padding-left: 0;
 			padding-bottom: rem-calc(25);
+			
 			@include medium {
 				display: block;
 			}
-		}
-	}
-
-	&__list {
-		@include flex-row-align-center;
-		gap: rem-calc(15);
-
-		&-item {
-			& a {
-				font-size: rem-calc(14);
-				line-height: rem-calc(20);
-				letter-spacing: 0.1px;
-			}
-
-			&_active {
-				& a {
-					color: $blue-initial;
-					text-decoration: underline;
-					text-underline-offset: rem-calc(12);
-					text-decoration-thickness: rem-calc(2);
-				}
-			}
-		}
-
-		@include medium {
-			flex-direction: column;
-			gap: rem-calc(21);
-		}
-
-	}
-
-	&__arrow {
-		margin-left: rem-calc(8);
-
-		@include medium {
-			display: none;
 		}
 	}
 
