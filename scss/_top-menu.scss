@@ -1,5 +1,7 @@
 .top-menu {
-	@include flex-row-align-center;
+	display: flex;
+	flex-direction: row;
+    align-items: baseline;
 	gap: rem-calc(15);
 
 	@include medium {
@@ -30,7 +32,6 @@
 	}
 
 	&__arrow {
-		margin-top: rem-calc(2);
 		margin-left: rem-calc(8);
 
 		@include medium {

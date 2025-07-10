@@ -240,7 +240,7 @@ body:has(.popup_active) {
 .top-menu {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   gap: 0.9375rem; }
   @media only screen and (max-width: 60rem) {
     .top-menu {
@@ -259,7 +259,6 @@ body:has(.popup_active) {
       display: flex;
       align-items: center; }
   .top-menu__arrow {
-    margin-top: 0.125rem;
     margin-left: 0.5rem; }
     @media only screen and (max-width: 60rem) {
       .top-menu__arrow {
